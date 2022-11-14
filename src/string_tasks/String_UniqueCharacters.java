@@ -1,16 +1,20 @@
 package string_tasks;
 
 public class String_UniqueCharacters {
+    public static void main(String[] args) {
+        System.out.println(unique("AAABBBCCCDEF"));
+    }
 
-    /*
-    Write a return method that can find the unique characters from the String
-            Ex: unique("AAABBBCCCDEF") ==> "DEF";
 
-     */
+
+//   4. String -- Find the unique
+//Write a return  method that can find the unique characters from the String
+//
+//Ex:  unique("AAABBBCCCDEF")  ==>  "DEF";
 
     public static String unique(String str) {
         String[] arr = str.split("");
-        String unique1 = "";
+        String result = "";
 
         for (int j = 0; j < arr.length; j++) {
             int num = 0;
@@ -20,11 +24,11 @@ public class String_UniqueCharacters {
                 }
             }
             if (num == 1) {
-                unique1 += arr[j];
+                result += arr[j];
             }
         }
 
-        return unique1;
+        return result;
     }
 
 
